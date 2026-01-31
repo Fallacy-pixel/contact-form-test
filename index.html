@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form PoC</title>
+    <style>
+        body { font-family: sans-serif; display: flex; justify-content: center; padding: 20px; background: #f4f4f4; }
+        form { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); width: 100%; max-width: 400px; }
+        .field { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 5px; font-weight: bold; }
+        input, textarea { width: 100%; padding: 8px; box-sizing: border-box; border: 1px solid #ccc; border-radius: 4px; }
+        button { background: #007bff; color: white; border: none; padding: 10px 15px; border-radius: 4px; cursor: pointer; width: 100%; }
+        button:hover { background: #0056b3; }
+    </style>
+</head>
+<body>
+
+    <form action="https://getform.io/f/YOUR-UNIQUE-ID-HERE" method="POST">
+        <div class="field">
+            <label>First Name</label>
+            <input type="text" name="first_name" required>
+        </div>
+        <div class="field">
+            <label>Last Name</label>
+            <input type="text" name="last_name" required>
+        </div>
+        <div class="field">
+            <label>Email Address</label>
+            <input type="email" name="email" required>
+        </div>
+        <div class="field">
+            <label>Phone Number</label>
+            <input type="tel" name="phone">
+        </div>
+        <div class="field">
+            <label>Inquiry</label>
+            <textarea name="inquiry" rows="4" required></textarea>
+        </div>
+        
+        <input type="hidden" name="_gotcha" style="display:none !important">
+        
+        <button type="submit">Send Inquiry</button>
+    </form>
+
+</body>
+</html>
