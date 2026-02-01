@@ -7,45 +7,48 @@
     <style>
         body { font-family: sans-serif; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; background: #f4f4f4; }
         form { background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); width: 100%; max-width: 400px; }
+        h2 { margin-top: 0; color: #333; font-size: 1.5rem; text-align: center; margin-bottom: 20px; }
         .field { margin-bottom: 15px; }
         label { display: block; margin-bottom: 5px; font-weight: bold; color: #555; }
         input, textarea { width: 100%; padding: 10px; box-sizing: border-box; border: 1px solid #ccc; border-radius: 4px; font-size: 14px; }
-        button { background: #007bff; color: white; border: none; padding: 12px; border-radius: 4px; cursor: pointer; width: 100%; font-size: 16px; font-weight: bold; }
+        input:focus, textarea:focus { border-color: #007bff; outline: none; }
+        button { background: #007bff; color: white; border: none; padding: 12px; border-radius: 4px; cursor: pointer; width: 100%; font-size: 16px; font-weight: bold; transition: background 0.3s; }
         button:hover { background: #0056b3; }
     </style>
 </head>
 <body>
 
     <form action="https://forminit.com/f/5yd6r238ep5" method="POST" accept-charset="UTF-8">
+        <h2>Send us an Inquiry</h2>
         
         <div class="field">
-            <label>First Name</label>
-            <input type="text" name="fi-sender-firstName" required>
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" name="firstName" required>
         </div>
 
         <div class="field">
-            <label>Last Name</label>
-            <input type="text" name="fi-sender-lastName" required>
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" name="lastName" required>
         </div>
 
         <div class="field">
-            <label>Email Address</label>
-            <input type="email" name="fi-sender-email" required>
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required>
         </div>
 
         <div class="field">
-            <label>Phone Number</label>
-            <input type="tel" name="fi-sender-phone">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone">
         </div>
 
         <div class="field">
-            <label>Inquiry</label>
-            <textarea name="fi-sender-message" rows="4" required></textarea>
+            <label for="message">Inquiry</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
         </div>
         
         <input type="hidden" name="_gotcha" style="display:none !important">
         
-        <button type="submit">Send Inquiry</button>
+        <button type="submit">Submit Request</button>
     </form>
 
 </body>
