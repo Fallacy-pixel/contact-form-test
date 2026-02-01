@@ -5,40 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Form PoC</title>
     <style>
-        body { font-family: sans-serif; display: flex; justify-content: center; padding: 20px; background: #f4f4f4; }
-        form { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); width: 100%; max-width: 400px; }
+        body { font-family: sans-serif; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; background: #f4f4f4; }
+        form { background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); width: 100%; max-width: 400px; }
+        h2 { margin-top: 0; color: #333; font-size: 1.5rem; text-align: center; }
         .field { margin-bottom: 15px; }
-        label { display: block; margin-bottom: 5px; font-weight: bold; }
-        input, textarea { width: 100%; padding: 8px; box-sizing: border-box; border: 1px solid #ccc; border-radius: 4px; }
-        button { background: #007bff; color: white; border: none; padding: 10px 15px; border-radius: 4px; cursor: pointer; width: 100%; }
+        label { display: block; margin-bottom: 5px; font-weight: bold; color: #555; }
+        input, textarea { width: 100%; padding: 10px; box-sizing: border-box; border: 1px solid #ccc; border-radius: 4px; font-size: 14px; }
+        input:focus, textarea:focus { border-color: #007bff; outline: none; }
+        button { background: #007bff; color: white; border: none; padding: 12px; border-radius: 4px; cursor: pointer; width: 100%; font-size: 16px; font-weight: bold; transition: background 0.3s; }
         button:hover { background: #0056b3; }
     </style>
 </head>
 <body>
 
-    <form action="https://forminit.com/f/5yd6r238ep5" method="POST">
+    <form action="https://forminit.com/f/5yd6r238ep5" method="POST" accept-charset="UTF-8">
+        <h2>Contact Us</h2>
+        
+        <input type="hidden" name="_charset" value="utf-8">
+
         <div class="field">
-            <label>First Name</label>
-            <input type="text" name="first_name" required>
+            <label for="first_name">First Name</label>
+            <input type="text" id="first_name" name="first_name" placeholder="Enter your first name" required>
         </div>
+
         <div class="field">
-            <label>Last Name</label>
-            <input type="text" name="last_name" required>
+            <label for="last_name">Last Name</label>
+            <input type="text" id="last_name" name="last_name" placeholder="Enter your last name" required>
         </div>
+
         <div class="field">
-            <label>Email Address</label>
-            <input type="email" name="email" required>
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="email@example.com" required>
         </div>
+
         <div class="field">
-            <label>Phone Number</label>
-            <input type="tel" name="phone">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="(555) 000-0000">
         </div>
+
         <div class="field">
-            <label>Inquiry</label>
-            <textarea name="inquiry" rows="4" required></textarea>
+            <label for="inquiry">Inquiry</label>
+            <textarea id="inquiry" name="inquiry" rows="4" placeholder="How can we help you?" required></textarea>
         </div>
         
-        <input type="hidden" name="_gotcha" style="display:none !important">
+        <input type="text" name="_gotcha" style="display:none !important" tabindex="-1" autocomplete="off">
         
         <button type="submit">Send Inquiry</button>
     </form>
